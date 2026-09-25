@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ugkd"
+version = "0.1.0"
+description = "Uncertainty-guided knowledge distillation: teacher and student training scripts for tabular, image and audio data."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = [
+    "torch>=2.4", "torchvision>=0.19", "torchaudio>=2.4", "numpy>=1.26", "scipy>=1.11",
+    "soundfile>=0.12", "scikit-learn>=1.4",
+]
+
+[project.optional-dependencies]
+datasets = ["uproot>=5.3", "awkward>=2.6", "opencv-python-headless>=4.9"]
+laplace = ["laplace-torch>=0.2"]
+
+[tool.setuptools.packages.find]
+include = ["ugkd*"]

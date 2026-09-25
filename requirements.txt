@@ -1,0 +1,15 @@
+torch>=2.4
+torchvision>=0.19
+torchaudio>=2.4
+numpy>=1.26
+scipy>=1.11
+soundfile>=0.12
+scikit-learn>=1.4
+
+# dataset construction only
+uproot>=5.3             # JetClass extraction (make_jets_data.py)
+awkward>=2.6            # JetClass extraction (make_jets_data.py)
+opencv-python-headless>=4.9   # spatter and frost corruptions (make_cifar_data.py)
+
+# the library-backed posterior only
+laplace-torch>=0.2      # --laplace library-full | library-kron
