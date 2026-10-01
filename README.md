@@ -1,11 +1,3 @@
-# Selective Knowledge Distillation from Partially Expert Teachers: An SGD Analysis
-
-This repository includes the source code used in the paper "Selective Knowledge Distillation from Partially Expert Teachers: An SGD Analysis".
-
-## Abstract
-
-Knowledge Distillation (KD) typically relies on a teacher whose predictions are assumed to provide useful supervision throughout the student's training data. In practice, pretrained teachers can be reliable on some inputs while being misleading on others. We study Stochastic Gradient Descent (SGD)-based KD from such partially expert teachers and ask, on a sample-by-sample basis, when the student should learn from the observed one-hot label and when it should learn from the teacher. We derive convergence bounds whose asymptotic error decomposes into competing sample-wise costs associated with the two supervision sources. Our analysis shows that the cost of one-hot supervision is governed by the intrinsic diversity of the Bayes Class Probabilities (BCPs), whereas the cost of teacher supervision increases with the teacher error relative to them, yielding a principled sample-wise routing rule. Since the underlying BCPs are unavailable in practice, we relate these quantities to predictive uncertainty: aleatoric uncertainty provides a proxy for BCP diversity, while epistemic uncertainty indicates limited teacher expertise. Building on this connection, we propose an uncertainty-guided selective distillation method that routes each sample between label- and teacher-based supervision. Experiments across vision, audio, and high-energy physics classification tasks with partially expert teachers demonstrate consistent improvements over state-of-the-art KD approaches.
-
 ## Overview
 
 This repository consists of the following Python scripts:
